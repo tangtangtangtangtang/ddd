@@ -1,12 +1,12 @@
 /*
  * @Author: xiaozhuo
  * @Date: 2021-11-15 15:07:52
- * @LastEditTime: 2021-11-15 15:17:08
+ * @LastEditTime: 2021-11-15 16:56:44
  * @LastEditors: xiaozhuo
  * @Description: 
  * Enuma Elish
  */
-import THREE from 'three.js'
+import * as THREE from 'three'
 import basicImplements from './basicImplements'
 
 class Basic implements basicImplements {
@@ -24,14 +24,6 @@ class Basic implements basicImplements {
             0.1,
             1000
         )
-        this.basicInit()
-    }
-
-    basicInit() {
-        //第一步新建一个场景
-        this.setCamera()
-        this.setRenderer()
-        this.render()
     }
 
     //render 方法 
@@ -46,8 +38,6 @@ class Basic implements basicImplements {
     setRenderer() {
         // 设置画布的大小
         this.renderer.setSize(window.innerWidth, window.innerHeight)
-        //这里 其实就是canvas 画布  renderer.domElement
-        document.body.appendChild(this.renderer.domElement)
     }
 }
 

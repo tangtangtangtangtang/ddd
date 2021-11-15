@@ -1,12 +1,12 @@
 /*
  * @Author: xiaozhuo
  * @Date: 2021-11-15 15:07:52
- * @LastEditTime: 2021-11-15 15:13:22
+ * @LastEditTime: 2021-11-15 16:56:48
  * @LastEditors: xiaozhuo
  * @Description: 
  * Enuma Elish
  */
-import THREE from 'three.js'
+import * as THREE from 'three'
 
 class Basic {
     scene: THREE.Scene
