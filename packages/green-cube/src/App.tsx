@@ -6,15 +6,14 @@ interface IProps {
 
 }
 
-const App: React.FC<IProps> = (props) => {
-    useEffect(() => {
-      const c = new Circle()
-      // c.init()
-      c.animate()
-    }, [])
-    return (<div className={S.container}>
+const App: React.FC<IProps> = () => {
+  useEffect(() => {
+    const c = new Circle()
+    c.animate()
+  }, [])
+  return (<div className={S.container}>
 
-    </div>)
+  </div>)
 }
 
 export default React.memo(App)

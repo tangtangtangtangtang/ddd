@@ -44,7 +44,7 @@
     ]
   },
   "devDependencies": {
-    "@types/three": "^0.133.0",
+    "@types/three.js": "npm:@types/three@^0.134.0",
     "i": "^0.3.7",
     "npm": "^8.0.0"
   }
