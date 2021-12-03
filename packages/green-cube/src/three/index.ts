@@ -1,7 +1,7 @@
 /*
  * @Author: xiaozhuo
  * @Date: 2021-10-08 21:04:30
- * @LastEditTime: 2021-11-15 16:55:45
+ * @LastEditTime: 2021-11-15 17:58:30
  * @LastEditors: xiaozhuo
  * @Description: 
  * Enuma Elish
@@ -44,16 +44,16 @@ class GreenCube extends basic implements basicImplements {
   }
 
   createBox() {
-    const geometry = new THREE.BoxGeometry(1, 1, 1)
-    const material = new THREE.MeshBasicMaterial({ color: 0xcecece })
+    const geometry = new THREE.BoxGeometry(10, 10, 10)
+    const material = new THREE.MeshPhongMaterial({ color: 0xcecece, specular: 0xffffff, shininess: 1 })
     const cube = new THREE.Mesh(geometry, material)
-    cube.position.set(20, 0, 0)
+    cube.position.set(50, 0, 50)
     return cube
   }
 
   createOct() {
     const geometry = new THREE.SphereGeometry(12, 8, 8);
-    const material = new THREE.MeshBasicMaterial({ color: 0xcecece })
+    const material = new THREE.MeshPhongMaterial({ color: 0xcecece, specular: 0xffffff, shininess: 1 })
 
     const cube = new THREE.Mesh(geometry, material)
     return cube
@@ -72,7 +72,7 @@ class GreenCube extends basic implements basicImplements {
   }
 
   setScene() {
-    this.scene.background = new THREE.Color(0xffffff)
+    this.scene.background = new THREE.Color('black')
   }
 
   // 设置渲染器
@@ -87,14 +87,30 @@ class GreenCube extends basic implements basicImplements {
 
   // 设置环境光
   setLight() {
-    const light = new THREE.PointLight(0xffffff, 0.5) // 环境光
-    light.position.set(10, 10, 10)
-    light.castShadow = true
+    // const light = new THREE.SpotLight(0xffffff, 1) // 环境光
+    // light.position.set(0, 100, 0)
+    // light.castShadow = true
+    // this.scene.add(light)
 
-    const light2 = new THREE.PointLight(0xffffff, 0.5) // 环境光
-    light2.position.set(-10, -10, 10)
-    light2.castShadow = true
-    this.scene.add(light2)
+    // const light2 = new THREE.SpotLight(0xffffff, 1) // 环境光
+    // light2.position.set(0, -100, 0)
+    // light2.castShadow = true
+    // this.scene.add(light2)
+
+    const light3 = new THREE.SpotLight(0xffffff, 0.9) // 环境光
+    light3.position.set(100, 100, 100)
+    light3.castShadow = true
+    this.scene.add(light3)
+
+    const light4 = new THREE.SpotLight(0xffffff, 0.9) // 环境光
+    light4.position.set(-100, -100, -100)
+    light4.castShadow = true
+    this.scene.add(light4)
+
+    // const light2 = new THREE.PointLight(0xffffff, 0.5) // 环境光
+    // light2.position.set(-50, -50, -50)
+    // light2.castShadow = true
+    // this.scene.add(light2)
   }
 
   animate() {

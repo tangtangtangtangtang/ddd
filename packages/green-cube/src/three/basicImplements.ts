@@ -1,7 +1,7 @@
 /*
  * @Author: xiaozhuo
  * @Date: 2021-11-15 15:07:52
- * @LastEditTime: 2021-11-15 16:56:48
+ * @LastEditTime: 2021-11-15 17:11:54
  * @LastEditors: xiaozhuo
  * @Description: 
  * Enuma Elish
@@ -26,20 +26,13 @@ class Basic {
     }
 
     //render 方法 
-    render() {
-        this.renderer.render(this.scene, this.camera)
-    }
+    render() { }
 
     // 新建透视相机
     setCamera() { }
 
     // 设置渲染器
-    setRenderer() {
-        // 设置画布的大小
-        this.renderer.setSize(window.innerWidth, window.innerHeight)
-        //这里 其实就是canvas 画布  renderer.domElement
-        document.body.appendChild(this.renderer.domElement)
-    }
+    setRenderer() { }
 }
 
 export default Basic
